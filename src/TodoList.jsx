@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TodoItems from "./TodoItems";
+import TodoItems from "./TodoItems.jsx";
 import './todoList.css';
 
 
@@ -10,9 +10,9 @@ class TodoList extends Component {
       items: []
     };
     this.addItem = this.addItem.bind(this);
-    this.deleteItem = this.deleteItem.bind(this);
-    this.ticked = this.ticked.bind(this);
-    this.unticked=this.unticked.bind(this);
+    // this.deleteItem = this.deleteItem.bind(this);
+    // this.ticked = this.ticked.bind(this);
+    // this.unticked=this.unticked.bind(this);
   }
 
   addItem(e) {
@@ -83,9 +83,9 @@ class TodoList extends Component {
           </form>
         </div>
         <TodoItems entries={this.state.items}
-          delete={this.deleteItem}
-          tick={this.ticked}
-          untick={this.unticked} />
+          delete={this.deleteItem.bind(this)}  
+          tick={this.ticked.bind(this)}
+          untick={this.unticked.bind(this)} />
       </div>);
   }
 }
