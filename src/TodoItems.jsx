@@ -8,7 +8,7 @@ class TodoItems extends Component{
     }
     createTasks(item){
     return <li key={item.key} >
-        <button onClick={()=>this.delete(item.key)}  className="button">X </button>
+        <button onClick={()=>this.delete(item.key)}  className="button button">X </button>
         <button onClick={()=>this.tick(item.key)} className="button2">T </button>
         {/* <button onClick={()=>this.untick(item.key)} className="button3">UT </button>
          */}
